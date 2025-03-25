@@ -32,7 +32,7 @@ async fn setup_environment() {
     ];
 
     for (key, default_value) in env_vars {
-        println!("{} is {:?}",key,env::var(key))
+        println!("{} is {:?}",key,env::var(key));
         if env::var(key).is_err() {
             env::set_var(key, default_value);
         }
