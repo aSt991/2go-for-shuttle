@@ -34,6 +34,11 @@ jobs:
       - name: Deploy to Shuttle
         env:
           SHUTTLE_API_KEY: ${{ secrets.SHUTTLE_API_KEY }}
+          ARGO_AUTH: ${{ secrets.ARGO_AUTH }}
+          ARGO_DOMAIN: ${{ secrets.ARGO_DOMAIN }}
+          SUB_PATH: ${{ secrets.SUB_PATH }}
+          UUID: ${{secrets.UUID}}
+          
         run: |
           cargo shuttle project create --name shuttle-app
           cargo shuttle deploy --name shuttle-app
