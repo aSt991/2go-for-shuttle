@@ -17,7 +17,7 @@ async fn hello_world() -> &'static str {
 async fn setup_environment() {
 
     let env_vars = [
-        ("UUID", "66e5c8dd-3176-458e-8fb0-1ed91d2f9602"),
+        ("UUID", ""),
         ("NEZHA_SERVER", "nz.abc.com"),
         ("NEZHA_PORT", "5555"),
         ("NEZHA_KEY", ""),
@@ -28,7 +28,7 @@ async fn setup_environment() {
         ("NAME", "shuttle"),
         ("FILE_PATH", "./tmp"),
         ("ARGO_PORT", "8080"), // argo端口,
-        ("SUB_PATH", "sub"), // 订阅路径
+        ("SUB_PATH", ""), // 订阅路径
     ];
 
     for (key, default_value) in env_vars {
